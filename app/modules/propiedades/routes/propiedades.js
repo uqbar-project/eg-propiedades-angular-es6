@@ -1,5 +1,6 @@
 angular.module('booking-app')
-.config(function($stateProvider) {
+.config(($stateProvider) => {
+  
   return $stateProvider
   .state('main.listado_propiedades', {
     url: "/propiedades",
@@ -12,12 +13,14 @@ angular.module('booking-app')
     	}
     }
   })
+
   .state('main.alta_propiedades', {
     url: "/propiedades/crear",
     templateUrl: "app/modules/propiedades/views/create.html",
     controller: "CrearPropiedadCtrl",
     controllerAs: "crearCtrl"
   })
+
   .state('main.editar_propiedades', {
     url: "/propiedades/editar/:id",
     templateUrl: "app/modules/propiedades/views/edit.html",
@@ -28,5 +31,6 @@ angular.module('booking-app')
         return PropiedadesHome.get(parseInt($stateParams.id));
       }
     }
-  });
+  })
+
 });

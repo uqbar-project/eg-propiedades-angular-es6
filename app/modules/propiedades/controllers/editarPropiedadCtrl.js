@@ -1,12 +1,16 @@
-function EditarPropiedadCtrl(PropiedadesHome, propiedad) {
-  var self = this;
-  self.propiedad = propiedad;
-  self.tiposDePropiedad = [{ nombre: "Hotel" }, { nombre: "Particular"}]
+class EditarPropiedadCtrl {
 
-  self.editar = function () {
-  	PropiedadesHome.update(self.propiedad);
+  constructor (PropiedadesHome, propiedad) {
+    this.PropiedadesHome = PropiedadesHome
+    this.propiedad = propiedad
+    this.tiposDePropiedad = [{ nombre: "Hotel" }, { nombre: "Particular"}]
   }
-};
+
+  editar() {
+  	this.PropiedadesHome.update(self.propiedad);
+  }
+
+}
 
 angular.module("booking-app")
 .controller("EditarPropiedadCtrl", EditarPropiedadCtrl);

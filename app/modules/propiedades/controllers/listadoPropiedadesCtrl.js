@@ -1,10 +1,14 @@
-function ListadoPropiedadesCtrl(propiedades, PropiedadesHome) {
-  var self = this;
-  self.propiedades = propiedades;
+class ListadoPropiedadesCtrl {
+  
+  constructor(propiedades, PropiedadesHome) {
+    this.propiedades = propiedades
+    this.PropiedadesHome = PropiedadesHome
+  }
 
-  self.delete = function (propiedadId) {
-  	PropiedadesHome.delete(propiedadId)
-	};
+  delete (propiedadId) {
+  	this.PropiedadesHome.delete(propiedadId)
+	}
+  
 }
 
 angular.module("booking-app")

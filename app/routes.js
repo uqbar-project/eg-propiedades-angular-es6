@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('booking-app', ['ui.router'])
-.config(function($urlRouterProvider, $locationProvider) {
+.config(($urlRouterProvider, $locationProvider) => {
   $urlRouterProvider.otherwise('/');
   return $locationProvider.html5Mode(true);
 })

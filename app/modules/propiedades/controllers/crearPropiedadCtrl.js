@@ -1,12 +1,16 @@
-function CrearPropiedadCtrl(PropiedadesHome) {
-  var self = this;
-  self.propiedad = {};
-  self.tiposDePropiedad = [{ nombre: "Hotel" }, { nombre: "Particular"}]
+class CrearPropiedadCtrl {
 
-  self.crear = function () {
-  	PropiedadesHome.create(self.propiedad);
+  constructor(PropiedadesHome) {
+    this.PropiedadesHome = PropiedadesHome
+    this.propiedad = {};
+    this.tiposDePropiedad = [{ nombre: "Hotel" }, { nombre: "Particular"}]
   }
-};
+  
+  crear () {
+  	this.PropiedadesHome.create(this.propiedad);
+  }
+
+}
 
 angular.module("booking-app")
 .controller("CrearPropiedadCtrl", CrearPropiedadCtrl);
