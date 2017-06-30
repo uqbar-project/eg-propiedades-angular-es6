@@ -1,5 +1,5 @@
 angular.module('booking-app')
-.config(function($stateProvider) {
+.config(($stateProvider) => {
   return $stateProvider
   .state('main.dashboard', {
     url: "/",
