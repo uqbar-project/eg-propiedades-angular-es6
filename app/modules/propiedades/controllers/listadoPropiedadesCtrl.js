@@ -1,13 +1,12 @@
 class ListadoPropiedadesCtrl {
   
-  constructor(propiedades, PropiedadesHome) {
-    this.propiedades = propiedades
+  constructor(PropiedadesHome) {
     this.PropiedadesHome = PropiedadesHome
   }
 
   delete (propiedadId) {
   	this.PropiedadesHome.delete(propiedadId)
-	}
+  }
   
 }
 
