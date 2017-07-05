@@ -1,5 +1,5 @@
 angular.module('booking-app')
-.config(function($stateProvider) {
+.config(($stateProvider) => {
   return $stateProvider
   .state('main.listado_propiedades', {
     url: "/propiedades",
@@ -7,7 +7,7 @@ angular.module('booking-app')
     controller: "ListadoPropiedadesCtrl",
     controllerAs: "listadoCtrl",
     resolve: {
-    	propiedades: function (PropiedadesHome) {
+    	propiedades: (PropiedadesHome) => {
     		return PropiedadesHome.getAll()
     	}
     }
@@ -18,8 +18,8 @@ angular.module('booking-app')
     controller: "PropiedadCtrl",
     controllerAs: "formCtrl",
     resolve: {
-      propiedad: function () { return {}; },
-      nombreController: function () { return "alta"; }
+      propiedad:  () => { return {} },
+      nombreController:  () => { return "alta" }
     }
   })
   .state('main.alta_propiedades.hotel', {
@@ -34,10 +34,10 @@ angular.module('booking-app')
     controller: "PropiedadCtrl",
     controllerAs: "formCtrl",
     resolve: {
-      propiedad: function (PropiedadesHome, $stateParams) {
-        return PropiedadesHome.get(parseInt($stateParams.id));
+      propiedad:  (PropiedadesHome, $stateParams) => {
+        return PropiedadesHome.get(parseInt($stateParams.id))
       },
-      nombreController: function () { return "editar"; }
+      nombreController: () => { return "editar" }
     }
   })
   .state('main.editar_propiedades.hotel', {
@@ -46,4 +46,4 @@ angular.module('booking-app')
   .state('main.editar_propiedades.particular', {
     views : { "tipo-propiedad": { templateUrl: "app/modules/propiedades/views/particularForm.html" } }
   })
-});
+})
