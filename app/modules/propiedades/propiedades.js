@@ -1,5 +1,6 @@
 angular.module('booking-app')
-.config(function($stateProvider) {
+
+.config(($stateProvider) => {
   return $stateProvider
   .state('main.listado_propiedades', {
     url: "/propiedades",
@@ -7,7 +8,7 @@ angular.module('booking-app')
     controller: "ListadoPropiedadesCtrl",
     controllerAs: "listadoCtrl",
     resolve: {
-    	propiedades: function (PropiedadesHome) {
+    	propiedades: (PropiedadesHome) => {
     		return PropiedadesHome.getAll()
     	}
     }
@@ -15,5 +16,5 @@ angular.module('booking-app')
   .state('main.alta_propiedades', {
     url: "/propiedades/crear",
     templateUrl: "app/modules/propiedades/views/create.html"
-  });
-});
+  })
+})

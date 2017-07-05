@@ -1,9 +1,10 @@
-function ListadoPropiedadesCtrl(propiedades) {
-  var self = this;
-  self.propiedades = propiedades;
+class ListadoPropiedadesCtrl {
+
+  constructor(propiedades) {
+    this.propiedades = propiedades
+  }
+  
 }
 
 angular.module("booking-app")
-.controller("ListadoPropiedadesCtrl", [ "propiedades", function(propiedades) { 
-  return new ListadoPropiedadesCtrl(propiedades);
-}]);
+.controller("ListadoPropiedadesCtrl", ListadoPropiedadesCtrl)
