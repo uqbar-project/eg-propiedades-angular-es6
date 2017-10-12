@@ -7,12 +7,12 @@ class CrearPropiedadCtrl {
   }
   
   guardar () {
-  	this.PropiedadesHome.create(this.propiedad);
+  	this.PropiedadesHome.create(this.propiedad)
   }
 
 }
 
 angular.module("booking-app")
-.controller("CrearPropiedadCtrl", CrearPropiedadCtrl);
+.controller("CrearPropiedadCtrl", CrearPropiedadCtrl)
 
-CrearPropiedadCtrl.$inject = [ "PropiedadesHome" ];
+CrearPropiedadCtrl.$inject = [ "PropiedadesHome" ]
