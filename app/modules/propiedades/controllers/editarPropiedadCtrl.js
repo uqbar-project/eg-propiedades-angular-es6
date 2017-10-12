@@ -7,12 +7,12 @@ class EditarPropiedadCtrl {
   }
 
   editar() {
-  	this.PropiedadesHome.update(self.propiedad);
+  	this.PropiedadesHome.update(self.propiedad)
   }
 
 }
 
 angular.module("booking-app")
-.controller("EditarPropiedadCtrl", EditarPropiedadCtrl);
+.controller("EditarPropiedadCtrl", EditarPropiedadCtrl)
 
-EditarPropiedadCtrl.$inject = [ "PropiedadesHome", "propiedad" ];
+EditarPropiedadCtrl.$inject = [ "PropiedadesHome", "propiedad" ]
