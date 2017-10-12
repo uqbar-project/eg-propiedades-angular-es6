@@ -8,11 +8,11 @@ class EditarPropiedadCtrl {
   }
 
   guardar() {
-  	this.PropiedadesHome.update(self.propiedad);
+  	this.PropiedadesHome.update(this.propiedad)
   }
 
   abrirTipoPropiedad() {
-  	this.state.go("main.editar_propiedades." + self.propiedad.tipo.nombre.toLowerCase());
+  	this.state.go("main.editar_propiedades." + this.propiedad.tipo.nombre.toLowerCase())
   }
 
 }

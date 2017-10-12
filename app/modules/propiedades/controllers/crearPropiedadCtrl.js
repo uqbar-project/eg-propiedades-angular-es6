@@ -8,7 +8,7 @@ class CrearPropiedadCtrl {
   }
   
   guardar() {
-  	this.PropiedadesHome.create(this.propiedad);
+  	this.PropiedadesHome.create(this.propiedad)
   }
 
   abrirTipoPropiedad() {
