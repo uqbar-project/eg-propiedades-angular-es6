@@ -4,6 +4,7 @@ class EditarPropiedadCtrl {
     this.PropiedadesHome = PropiedadesHome
     this.propiedad = propiedad
     this.tiposDePropiedad = [{ nombre: "Hotel" }, { nombre: "Particular"}]
+    console.log($state)
     this.state = $state
   }
 
@@ -20,4 +21,4 @@ class EditarPropiedadCtrl {
 angular.module("booking-app")
 .controller("EditarPropiedadCtrl", EditarPropiedadCtrl)
 
-EditarPropiedadCtrl.$inject = [ "PropiedadesHome", "propiedad" ]
+EditarPropiedadCtrl.$inject = [ "PropiedadesHome", "propiedad", "$state" ]

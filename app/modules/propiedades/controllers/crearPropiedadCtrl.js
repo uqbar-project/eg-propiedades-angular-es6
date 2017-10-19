@@ -20,4 +20,4 @@ class CrearPropiedadCtrl {
 angular.module("booking-app")
 .controller("CrearPropiedadCtrl", CrearPropiedadCtrl)
 
-CrearPropiedadCtrl.$inject = [ "PropiedadesHome" ]
+CrearPropiedadCtrl.$inject = [ "PropiedadesHome" , "$state" ]
