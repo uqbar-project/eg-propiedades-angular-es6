@@ -28,9 +28,9 @@ angular.module('booking-app')
     controllerAs: "editarCtrl",
     resolve: {
       propiedad: function (PropiedadesHome, $stateParams) {
-        return PropiedadesHome.get(parseInt($stateParams.id));
+        return PropiedadesHome.get(parseInt($stateParams.id))
       }
     }
   })
 
-});
+})
