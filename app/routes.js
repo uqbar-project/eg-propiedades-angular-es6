@@ -1,8 +1,8 @@
 
 angular.module('booking-app', ['ui.router'])
 .config(($urlRouterProvider, $locationProvider) => {
-  $urlRouterProvider.otherwise('/');
-  return $locationProvider.html5Mode(true);
+  $urlRouterProvider.otherwise('/')
+  return $locationProvider.html5Mode(true)
 })
 .config(($stateProvider) => {
   return $stateProvider
@@ -22,5 +22,5 @@ angular.module('booking-app', ['ui.router'])
         templateUrl: "app/layout/sidebar.html"
       }
     }
-  });
-});
+  })
+})

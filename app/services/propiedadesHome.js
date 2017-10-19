@@ -1,4 +1,4 @@
-var propiedadIdActual = 1;
+var propiedadIdActual = 1
 
 class Propiedad {
 	constructor(direccion, localidad, estado, tipo) {

@@ -4,5 +4,5 @@ angular.module('booking-app')
   .state('main.dashboard', {
     url: "/",
     templateUrl: "app/modules/dashboard/dashboard.html"
-  });
-});
+  })
+})
