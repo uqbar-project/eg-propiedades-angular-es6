@@ -6,7 +6,7 @@ angular.module('booking-app')
         restrict: 'EA',
         templateUrl: 'app/directives/cajita/view/cajita.html',
         scope: {
-            detalle: '='
+            detalle: '<'
         }
     }
     
