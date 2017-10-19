@@ -3,10 +3,10 @@
 class DashboardCtrl {
   
   constructor() {
-    this.detalleMensajes = new Detalle(10, 'Nuevas mensajes!', "comments", "primary")
-    this.detalleCampanias = new Detalle(5, 'Nuevas campañas!', "tasks", "green")
-    this.detalleVentas = new Detalle(3, 'Nuevas ventas!', "shopping-cart", "yellow")
-    this.detalleQuejas = new Detalle(3, 'Nuevas quejas!', "support", "red")
+    this.detalleMensajes = new Detalle(10, '¡Nuevos mensajes!', "comments", "primary")
+    this.detalleCampanias = new Detalle(5, '¡Nuevas campañas!', "tasks", "green")
+    this.detalleVentas = new Detalle(3, '¡Nuevas ventas!', "shopping-cart", "yellow")
+    this.detalleQuejas = new Detalle(3, '¡Nuevas quejas!', "support", "red")
   }
   
 }
